@@ -1,0 +1,175 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+.row{
+	height: 1150px;
+}
+
+.row::before{
+	content: " ";
+	display: table;
+}
+
+.row::after{
+	content: " ";
+	box-sizing: border-box;
+	margin-bottom: 65px;
+}
+
+.tool a{
+	text-decoration: none;
+}
+
+.tool #test{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.tool #html_valid{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.tool #css_valid{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.tool #w3_school{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.tool #color_wheel{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+.tool #codepen{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+#test #circle {
+	position: relative;
+   background: #00ADEF;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#html_valid #circle {
+	position: relative;
+   background: #FF7C00;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#css_valid #circle {
+	position: relative;
+   background: #00CC13;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#w3_school #circle {
+	position: relative;
+   background: #00CC13;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#color_wheel #circle {
+	position: relative;
+   background: #00CC13;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#codepen #circle {
+	position: relative;
+   background: #00CC13;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#circle p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 60px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 200px;
+}
+
+.details{
+	background-color: #060d0f;
+   height: 460px;
+   text-align: center;
+   margin: 0 0 22px;
+   margin-top: -240px;
+   padding: 30px 40px;
+}
+
+.details h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #FFFFFF;
+	margin-top: 280px;
+	margin-bottom: 0px;
+}
+
+.details p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #888888;
+}
+
