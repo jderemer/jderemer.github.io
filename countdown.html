@@ -57,17 +57,18 @@
 				var currentDate = new Date();
 			
 				// Check to see if thanksgiving or christmas countdown is selected
-				if(document.getElementById("thanksgiv").checked == true)
+				if(document.getElementById("thanksgiv").checked == true && document.getElementById("holiday_style").href != "thanksgiving.css")
 				{
 					targetDate = thanksgiving;
 					document.getElementById("holiday_style").href     = "thanksgiving.css";
-					document.getElementById("holiday_text").innerHTML = "Until Thanksgiving!"
+					document.getElementById("holiday_text").innerHTML = "Until Thanksgiving!";
 				}
-				else
+				
+				if(document.getElementById("christmas").checked == true && document.getElementById("holiday_style").href != "christmas.css")
 				{
 					targetDate = christmas;
 					document.getElementById("holiday_style").href     = "christmas.css";
-					document.getElementById("holiday_text").innerHTML = "Until Christmas!"
+					document.getElementById("holiday_text").innerHTML = "Until Christmas!";
 				}
 				
 				var days     = calcDays (currentDate);
