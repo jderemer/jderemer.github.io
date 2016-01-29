@@ -1,0 +1,130 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+/*********************************/
+/*    INTRO ATTENTION GETTER     */
+/*********************************/
+#intro_statement{
+	background-image: url("../images/mountain_edit.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 150px 0;
+}
+
+#intro_statement h2{
+	font-size: 70px!important;
+	color: #fff!important;
+	margin-top: 0;
+}
+
+#intro_statement p{
+	font-size: 40px!important;
+	color: #999!important;
+	margin-bottom: 60px;
+}
+
+#intro_statement a{
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 15px 20px;
+	color: #fff;
+	border-radius: 7px;
+	border: 2px solid #fff;
+	background-color: none;
+	transition-property: background-color, color;
+	transition-duration: .2s;
+	text-decoration: none;
+}
+
+#intro_statement a:hover{
+	background-color: #fff;
+	color: #122136;
+}
+
+/*********************************/
+/*       BEAUTIFUL DESIGN        */
+/*********************************/
+#beautiful_design{
+	background-color: #D1EBF0;
+	text-align: center;
+	padding: 50px 0;
+}
+
+#beautiful_design h2{
+	margin: 0;
+	font-size: 60px;
+	font-family: 'Source Serif Pro', serif;
+	color: #122136;
+}
+
+/*********************************/
+/*     ARE YOU READY(bottom)     */
+/*********************************/
+#sign_up{
+	text-align: center;
+	background-color: #7DD48A;
+	padding: 80px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#sign_up h3{
+	margin: 0 0 40px 0;
+	font-size: 40px;
+	color: #fff;
+	font-weight: normal;
+}
+
+#sign_up a{
+	font-size: 20px;
+	padding: 15px 20px;
+	color: #fff;
+	border-radius: 7px;
+	background-color: #122136; 
+	transition-property: background-color;
+	transition-duration: .2s;
+	text-decoration: none;
+}
+
+#sign_up a:hover{
+	background-color: #3865A3;
+}
+
+/*********************************/
+/*         FOOTER LINKS          */
+/*********************************/
+#bottom_links{
+	padding: 30px 0;
+	background-color: #111;
+}
+
+#bottom_links ul{
+	list-style: none;
+	display: inline-block;
+	width: 20%;
+}
+
+#bottom_links p{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #fff;
+}
+
+#bottom_links a{
+	line-height: 28px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	color: #ccc;
+	transition-property: color;
+	transition-duration: .2s;
+}
+
+#bottom_links a:hover{
+	color: #fff;
+}
