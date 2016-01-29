@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--          Student Name: Jared DeRemer -->
+		<!-- Course/Section Number: CS 337-2      -->
+		<!--      Project Due Date: 11-25-15      -->
+	
+		<title>Holiday Countdown</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jared DeRemer">
+		
+		<!-- Default stylesheet -->
+		<link id="holiday_style" rel="stylesheet" href="thanksgiving.css" type="text/css">
+		
+		<!-- Script returns the countdown numbers and styles based on the holiday selected -->
+		<script>
+			// Holiday dates for the target to be set as
+			var thanksgiving = new Date(2015, 10, 26, 0, 0, 0);
+			var christmas    = new Date(2015, 11, 25, 0, 0, 0);
+			var targetDate   = thanksgiving;
+			
+			// Calculate the number of days till target
+			function calcDays(p_currentDate)
+			{
+				var days = Math.floor((targetDate - p_currentDate) / (1000 * 60 * 60 * 24));
+				
+				return days;
+			}
+			
+			// Calculate the number of hours till target
+			function calcHours(p_currentDate)
+			{
+				var hours = Math.floor(((targetDate - p_currentDate) / (1000 * 60 * 60)) % 24);
+				
+				return hours;
+			}
+			
+			// Calculate the number of minutes till target
+			function calcMins(p_currentDate)
+			{
+				var minutes = Math.floor(((targetDate - p_currentDate) / (1000 * 60)) % 60);
+				
+				return minutes;
+			}
+			
+			// Calculate the number of seconds till target
+			function calcSecs(p_currentDate)
+			{
+				var seconds = Math.floor(((targetDate - p_currentDate) / (1000)) % 60);
+				
+				return seconds;
+			}
+			
+			// Countdown timer till target
+			function countdown()
+			{
+				var currentDate = new Date();
+			
+				// Check to see if thanksgiving or christmas countdown is selected
+				if(document.getElementById("thanksgiv").checked == true)
+				{
+					targetDate = thanksgiving;
+					document.getElementById("holiday_style").href     = "thanksgiving.css";
+					document.getElementById("holiday_text").innerHTML = "Until Thanksgiving!"
+				}
+				else
+				{
+					targetDate = christmas;
+					document.getElementById("holiday_style").href     = "christmas.css";
+					document.getElementById("holiday_text").innerHTML = "Until Christmas!"
+				}
+				
+				var days     = calcDays (currentDate);
+				var hours    = calcHours(currentDate);
+				var minutes  = calcMins (currentDate);
+				var seconds  = calcSecs (currentDate);
+				
+				document.getElementById("fday").innerHTML  = days;
+				document.getElementById("fhour").innerHTML = hours;
+				document.getElementById("fmin").innerHTML  = minutes;
+				document.getElementById("fsec").innerHTML  = seconds;
+				return;
+			}
+		</script>
+		
+		<script> 
+			
+		</script>
+	</head>
+	
+	<body onload="setInterval('countdown()', 100)">
+		<section>
+			<h1>There Are Only</h1>
+			<div id="timer">
+				<table>
+					<tr id="numbers">
+						<td id="fday"></td>
+						<td id="fhour"></td>
+						<td id="fmin"></td>
+						<td id="fsec"></td>
+					</tr>
+					<tr id="units">
+						<td>Days</td>
+						<td>Hours</td>
+						<td>Minutes</td>
+						<td>Seconds</td>
+					</tr>
+				</table>
+			</div>
+		
+			<h1 id="holiday_text">Until Thanksgiving!</h1>
+			
+			<div id="holiday_choice">
+				<table>
+					<tr>
+						<td>
+							<label for="thanksgiv">Thanksgiving</label>
+						</td>
+						<td style="margin-right: 10px;">
+							<input type="radio"
+								   name="holiday_select"
+								   id="thanksgiv"
+								   checked="checked">
+						</td>
+						
+						<td>
+							<label for="christmas"
+								   title="Countdown to Christmas">Christmas</label>
+						</td>
+						<td>
+							<input type="radio"
+								   name="holiday_select"
+								   id="christmas"
+								   title="Countdown to Christmas">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		
+		<footer>
+			<p>&copy;2015 DeRemer Web Developement / All photos acquired from unsplash.com</p>
+		</footer>
+	</body>
+</html>
