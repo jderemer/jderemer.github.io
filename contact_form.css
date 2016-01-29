@@ -1,0 +1,108 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+fieldset{
+	border: none;
+	margin-top: 50px;
+	padding: 0px;
+}
+
+h1{
+	text-align: center;
+	font-size: 70px;
+	font-family: 'Source Serif Pro', serif;
+	font-weight: bold;
+	color: #122136;
+}
+
+nav > table{
+	margin: 0px auto;
+}
+
+fieldset > table{
+	margin: 50px auto;
+}
+
+table label{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: #122136;
+	margin-right: 50px;
+}
+
+table input, .form_group textarea{
+	height: 30px;
+	margin: 8px 10px;
+	padding: 6px 12px;
+	border: none;
+	background-color: #EFEFEF;
+	font-size: 15px;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder {
+   font-style: italic;  
+}
+
+::-moz-placeholder {
+   font-style: italic;  
+}
+
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
+
+.form_group{
+	width: 625px;
+}
+.form_group_heading{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 25px;
+	color: #122136;
+}
+
+.form_group input, .form_group textarea{
+	width: 625px;
+}
+
+.form_group textarea{
+	height: 30px;
+	margin: 8px 10px;
+	padding: 6px 12px;
+	border: none;
+	background-color: #EFEFEF;
+	font-size: 15px;
+	line-height: 30px;
+}
+
+#submit{
+	margin: 0px auto;
+	text-align: center;
+}
+input[type=submit]{
+	background: #122136;
+	height: 40px;
+	border: none;
+	margin: 0px auto;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #FFFFFF;
+	transition-property: background;
+	transition-duration: .2s;
+}
+
+input[type=submit]:hover{
+	background: #3865A3; 
+}
+
+fieldset p{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+}
