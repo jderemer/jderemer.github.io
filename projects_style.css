@@ -1,0 +1,90 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+.row{
+	height: 1150px;
+}
+
+.project a{
+	text-decoration: none;
+}
+
+.project #index_page,
+.project #tempest,
+.project #roman_road,
+.project #calc_survey,
+.project #countdown{
+	width: 33.33333%;
+	float: left;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
+#index_page #circle, 
+#tempest #circle,
+#roman_road #circle,
+#calc_survey #circle,
+#countdown #circle{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#index_page #circle {
+   background-image: url("../images/index_icon.jpg");
+}
+
+#tempest #circle {
+   background-image: url("../images/tempest_icon.jpg");
+}
+
+#roman_road #circle {
+   background-image: url("../images/road_icon.jpg");
+}
+
+#calc_survey #circle {
+   background-image: url("../images/calc_icon.jpg");
+}
+
+#countdown #circle{
+   background-image: url("../images/countdown_icon.jpg");
+}
+
+#circle p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 60px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 200px;
+}
+
+.details{
+	background-color: #060d0f;
+   height: 460px;
+   text-align: center;
+   margin: 0 0 22px;
+   margin-top: -240px;
+   padding: 30px 40px;
+}
+
+.details h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	color: #FFFFFF;
+	margin-top: 280px;
+	margin-bottom: 0px;
+}
+
+.details p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #888888;
+}
