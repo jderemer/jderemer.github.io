@@ -1,0 +1,122 @@
+/* CSS DOCUMENT */
+
+/****************************************/
+/*          Student Name: Jared DeRemer */
+/* Course/Section Number: CS 337-2		*/
+/*      Project Due Date: 10-19-15      */
+/****************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text);
+
+body{
+	margin: 0px;
+	background-color: #FFFFFF!important;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	background-color: #000000;
+	border-bottom: 5px solid;
+	border-color: #FFFFFF;
+	margin-bottom: 0px;
+}
+
+#top{
+	font-family: 'Oswald', sans-serif;
+	font-size: 4vw;
+	line-height: 100px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	height: 100px;
+}
+
+section{
+	height: 100%;
+
+	/* Background image acquired from unsplash.com */
+	background-image: url("road.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	border-bottom: 5px solid;
+	border-color: #000000;
+	text-align: center;
+}
+
+section h2, .ref, .verse{
+	background-color: rgba(255,255,255,.8);
+}
+
+section h2{
+	text-align: center;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 40px;
+	color: #333333;
+	line-height: 40px;
+	border-top: 5px solid;
+	border-color: #FFFFFF;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.ref{
+	text-align: center;
+	font-style: italic;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 20px;
+	line-height: 30px;
+	color: #555555;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-bottom: 20px;
+}
+
+.verse{
+	text-indent: 40px;
+	text-align: left;
+	font-family: 'Crimson Text', serif;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 35px;
+	color: #000000;
+	border-radius: 0px 0px 20px 20px;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+footer{
+	background-color: #000000;
+}
+
+footer a{
+	font-family: 'Source Serif Pro', serif;
+	line-height: 50px;
+	font-size: 20px;
+	color: #5D7132;
+	margin-left: 10px;
+	transition-property: color;
+	transition-duration: .3s;
+}
+
+footer a:hover{
+	color: #91A54C;
+}
