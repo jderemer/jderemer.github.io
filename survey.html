@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--          Student Name: Jared DeRemer -->
+		<!-- Course/Section Number: CS 337-2      -->
+		<!--      Project Due Date: 11-11-15      -->
+	
+		<title>Employee Pay Calculator and Satisfaction Survey</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jared DeRemer">
+		
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Montserrat);
+			@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+			@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+			body{
+				margin-top: -20px;
+				margin-left: 0px;
+			}
+				
+			nav{
+				width: 100%;
+				height: 80px;
+				text-decoration: none;
+				font-family: 'Montserrat', sans-serif;
+				background-color: #060d0f;
+			}
+
+			nav h1{
+				position: relative;
+				top: 18px;
+				margin-left: 20px;
+			}
+
+			nav h1 a{
+				color: #FFFFFF;
+				font-size: 40px;
+				text-decoration: none;
+			}
+
+			nav ul{
+				list-style: none;
+				text-align: right;
+			}
+
+			nav li{
+				top: -43px;
+				position: relative;
+				display: inline-block;
+			}
+			
+			nav a{
+				margin-right: 80px;
+				padding-bottom: 10px;
+				font-size: 18px;
+				color: #FFFFFF;
+				text-decoration: none;
+				transition-property: color;
+				transition-duration: .3s;
+			}
+
+			nav a:hover{
+				color: #A9A9A9;
+			}
+
+			section{
+				text-align: center;
+				margin-top: 65px;
+				margin-bottom: 65px;
+			}
+
+			h2{
+				font-family: 'Source Serif Pro', serif;
+				font-size: 56px;
+				color: #444444;
+				margin-bottom: 0px;
+			}
+
+			section p{
+				margin-top: 0px;
+				font-family: 'Source Serif Pro', serif;
+				font-size: 23px;
+				color: #888888;
+			}
+
+			hr {
+				padding-left: 15px;
+				padding-right: 15px;
+				margin-bottom: 65px;
+			}
+
+			form{
+				margin-bottom: 50px;
+			}
+
+			fieldset{
+				padding: 0;
+				border: none;
+			}
+
+			h3{
+				font-family: 'Montserrat', sans-serif;
+				font-size: 30px;
+				color: #444444;
+				line-height: 30px;
+				margin: 0px;
+				border-bottom: 1px solid #444444;
+			}
+
+			table{
+				border-collapse: collapse;
+				margin-left: auto;
+				margin-right: auto;
+				border-color: black;
+			}
+
+			#emp_info td, #calc_pay td{
+				width: 100px;
+				padding: 0px;
+			}
+
+			#emp_info label{
+				font-family: 'Raleway', sans-serif;
+				font-weight: 600;
+				margin-left: 5px;
+			}
+
+			#emp_info input, #calc_pay input{
+				height: 40px;
+				margin: 0px 5px;
+				padding: 0px;
+				font-size: 20px;
+				color: #444;
+				border: 1px solid #D9D9D9;
+				border-top: 1px solid #C0C0C0;
+			}
+			
+			input[type=text]:hover, select:hover{
+				border: 1px solid #b9b9b9;
+				border-top: 1px solid #a0a0a0;
+				box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+				-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+				-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+			}
+
+			#emp_info select{
+				height: 40px;
+				width: 247px;
+				margin: 0px 5px;
+				background: #ECECEC;
+				font-size: 20px;
+				color: #444;
+			}
+
+			#emp_info table, #calc_pay table{
+				margin-bottom: 20px;
+			}
+
+			#calc_pay input{
+				width: 100px;
+			}
+
+			#calc_pay label{
+				font-family: 'Raleway', sans-serif;
+				font-weight: 600;
+				text-align: right;
+				display: block;
+				width: 160px;
+				margin-right: 0px;
+			}
+
+			#survey{
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			#survey td{
+				border-bottom: 1px #DDDDDD solid;
+				font-size: 20px;
+			}
+
+			.button{
+				width: 134px;
+				text-align: center;
+			}
+
+			td > input[type=radio]{
+				width: 16px;
+				height: 16px;
+			}
+
+			.column_title{
+				width: 134px;
+				font-family: 'Raleway', sans-serif;
+				font-size: 20px;
+				font-weight: 600;
+				text-align: center;
+				line-height: 25px;
+				padding: 2px 0px;
+			}
+
+			.question{
+				font-family: 'Raleway', sans-serif;
+				font-weight: 400;
+				width: 400px;
+				line-height: 30px;
+				padding: 10px 0px 10px 26px;
+			}
+
+			input[type=checkbox]{
+				height: 16px;
+				width: 16px;
+			}
+			
+			.agree{
+				font-family: 'Montserrat', sans-serif;
+				font-size: 20px;
+			}
+
+			input[type=submit]{
+				background: #1f87c0;
+				height: 40px;
+				margin: 20px 0px;
+				border: none;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 20px;
+				color: #FFFFFF;
+				transition-property: background;
+				transition-duration: .2s;
+			}
+
+			input[type=submit]:hover{
+				background: #444444; 
+			}
+
+			#submit{
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			footer{
+				margin-top: 0px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 15px;
+				color: #888888;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function generateFullName()
+				{
+					document.getElementById("name").value =
+					document.getElementById("fname").value + ' ' +
+					document.getElementById("lname").value;
+				}
+			</script>
+	</head>
+	
+	<body>
+		<nav>
+			<h1><a href="../../index.html">D.W.D</a></h1>
+			<ul>
+				<li><a href="../../projects.html">PROJECTS</a>
+				<li><a href="../../tools.html">TOOLS</a>
+				<li><a href="../../about.html">ABOUT</a>
+			</ul>
+		</nav>
+		
+		<section>
+			<h2>Calculation & Survey</h2>
+		</section>
+		<hr />
+		
+		<form action="http://csweb/sparks/submit.php"
+				name="calc_and_survey" 
+				id="calc_and_survey"
+				onsubmit="return generateFullName()">
+			<input type="hidden" name="hidcompany" id="hidcompany" value="DeRemer Web Developement" />
+			<input type="hidden" name="name" id="name" value="" />
+			<fieldset id="emp_info">
+				<table>
+					<tr> 
+						<td colspan="2" style="border-bottom: none; width: 834px;">
+							<h3>Employee Information</h3>
+						</td>
+					</tr>
+					<tr><td colspan="2">&nbsp;</td></tr>
+					<tr>
+						<td colspan="2">
+							<label for="fname">Name</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text"
+			    				   name="fname"
+								   id="fname"
+								   maxlength="20"
+								   placeholder="First"
+								   required="required">
+						</td>
+						<td style="width: 577px;">
+							<input type="text"
+			    				   name="lname"
+								   id="lname"
+								   maxlength="20"
+								   placeholder="Last"
+								   required="required">
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td style="width: 834px;">
+							<label for="location">Work Location</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<select name=location 
+									id=location
+									required="required">
+								<option value=""
+										disabled="disabled" 
+										selected="selected" 
+										hidden="hidden">
+									Choose Location
+								</option>
+								<option value="IL">Chicago, IL</option>
+								<option value="NY">New York, NY</option>
+								<option value="FL">Orlando, FL</option>
+								<option value="CA">San Diego, CA</option>
+								<option value="WA">Seattle, WA</option>
+								<option value="MO">St. Louis, MO</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			
+			<hr />
+			
+			<fieldset id="calc_pay">
+				<table>
+					<tr> 
+						<td colspan="3" style="border-bottom: none;">
+							<h3>Calculate Pay</h3>
+						</td>
+					</tr>
+					<tr><td colspan="3">&nbsp;</td></tr>
+					<tr>
+						<td colspan="2" style="padding-right: 13px;">
+							<label for="hours_worked">Total Hours Worked</label>
+						</td>
+						<td style="width: 661px;">
+							<input type="text"
+			    				   name="hours_worked"
+								   id="hours_worked"
+								   maxlength="6"
+								   required="required"
+									pattern="[0-9]+">
+						</td>
+					</tr>
+					<tr><td colspan="3">&nbsp;</td></tr>
+					<tr>
+						<td>
+							<label for="pay_rate">Hourly Pay Rate</label>
+						</td>
+						<td style="width: 8px; padding-left: 5px;">$</td>
+						<td>
+							<input type="text"
+			    				   name="pay_rate"
+								   id="pay_rate"
+								   maxlength="6"
+								   required="required"
+								   pattern="^[\d]+([\.][\d]{2})?$">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			
+			<hr />
+			
+			<fieldset>
+				<table id="survey">
+					<tr> 
+						<td colspan="4" style="border-bottom: none;">
+							<h3>Employee Job Satisfaction</h3>
+						</td>
+					</tr>
+					<tr>
+						<td class="question"> </td>
+						<td class="column_title">Agree</td>
+						<td class="column_title">Neither Agree nor Disagree</td>
+						<td class="column_title">Disagree</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>I feel encouraged to come up with new and better ways of doing things.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_1"
+								   id="q1_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_1"
+								   id="q1_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_1"
+								   id="q1_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>My work gives me a feeling of personal accomplishment.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_2"
+								   id="q2_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_2"
+								   id="q2_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_2"
+								   id="q2_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>I have the tools and resources to do my job well.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_3"
+								   id="q3_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_3"
+								   id="q3_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_3"
+								   id="q3_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>On my job, I have clearly defined quality goals.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_4"
+								   id="q4_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_4"
+								   id="q4_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_4"
+								   id="q4_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>My job makes good use of my skills and abilities.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_5"
+								   id="q5_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_5"
+								   id="q5_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_5"
+								   id="q5_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>DeRemer Web Developement does an excellent job of keeping employees informed about matters affecting us.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_6"
+								   id="q6_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_6"
+								   id="q6_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_6"
+								   id="q6_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>DeRemer Web Developement demonstrates a commitment to quality.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_7"
+								   id="q7_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_7"
+								   id="q7_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_7"
+								   id="q7_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>I am satisfied with my involvement in decisions that affect my work.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_8"
+								   id="q8_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_8"
+								   id="q8_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_8"
+								   id="q8_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question">
+							<label>I am rewarded for the quality of my efforts.</label>
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_9"
+								   id="q9_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_9"
+								   id="q9_n"
+								   value="n">
+						</td>
+						<td class="button">
+							<input type="radio"
+								   name="question_9"
+								   id="q9_d"
+								   value="d">
+						</td>
+					</tr>
+					<tr>
+						<td class="question" style="border: none;">
+							<label>Considering everything, I am satisfied with my job.</label>
+						</td>
+						<td class="button" style="border: none;">
+							<input type="radio"
+								   name="question_10"
+								   id="q10_a"
+								   value="a"
+									required="required">
+						</td>
+						<td class="button" style="border: none;">
+							<input type="radio"
+								   name="question_10"
+								   id="q10_n"
+								   value="n">
+						</td>
+						<td class="button" style="border: none;">
+							<input type="radio"
+								   name="question_10"
+								   id="q10_d"
+								   value="d">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			
+			<hr style="margin-top: 0px;" />
+			
+			<div id="submit" style="width: 834px;">
+				<input type="checkbox"
+						 name="agree"
+						 id="agree"
+						 value="a"
+						 required="required" />
+				<label for="agree" class="agree">I agree that this is survey is my true opinion</label>
+				<br />
+				<input type="submit" value="Submit Survey"/>
+			</div>
+			
+		</form>
+		
+		<footer>
+			<p>&copy;2015 Jared DeRemer Designs / Some survey questions from qualtrics.com</p>
+		</footer>
+	</body>
+</html>
