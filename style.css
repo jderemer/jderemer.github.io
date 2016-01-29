@@ -1,0 +1,145 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro);
+
+body{
+	margin: 0px;
+}
+	
+/*********************************/
+/*            NAVBAR             */
+/*********************************/
+nav{
+	width: 100%;
+	height: 80px;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #122136;
+}
+
+nav table{
+	height: 80px;
+}
+
+nav table td:nth-of-type(1){
+	font-size: 40px;
+}
+
+nav table td:nth-of-type(5) > a{
+	border: 2px solid #FFF;
+	border-radius: 7px;
+	padding: 3px;
+	color: #54CC14;
+	border-color: #54CC14;
+	transition-property: color, border-color;
+	transition-duration: .3s;
+}
+
+nav table td:nth-of-type(5) > a:hover{
+	color: #3BFF3A;
+	border-color: #3BFF3A;
+}
+
+nav table td{
+	font-size: 18px;
+}
+
+nav a{
+	white-space: nowrap;
+	margin-right: 80px;
+	color: #a9a9a9;
+	text-decoration: none;
+	transition-property: color;
+	transition-duration: .3s;
+}
+
+nav a:hover{
+	color: #fff;
+}
+
+#current_page{
+	border-bottom: 1px solid;
+	border-color:#00ADEF;
+}
+/* END OF NAVBAR */
+
+
+/*********************************/
+/*        INTRO STATEMENT        */
+/*********************************/
+#intro_statement{
+	text-align: center;
+}
+
+#intro_statement h2{
+	font-family: 'Source Serif Pro', serif;
+	font-size: 56px;
+	color: #444444;
+	margin-bottom: 0px;
+}
+
+#intro_statement p{
+	margin-top: 0px;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 23px;
+	color: #888;
+}
+
+
+hr {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 65px;
+}
+
+/*********************************/
+/*         FOOTER LINKS          */
+/*********************************/
+#bottom_links{
+	padding: 30px 0;
+	background-color: #111;
+}
+
+#bottom_links ul{
+	list-style: none;
+	display: inline-block;
+	width: 20%;
+}
+
+#bottom_links p{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #fff;
+}
+
+#bottom_links a{
+	line-height: 28px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	color: #ccc;
+	transition-property: color;
+	transition-duration: .2s;
+}
+
+#bottom_links a:hover{
+	color: #fff;
+}
+
+/*********************************/
+/*            FOOTER             */
+/*********************************/
+footer{
+	padding: 10px 0;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #122136;
+	color: #fff;
+}
+
+footer p{
+	margin: 0;
+	
+}
