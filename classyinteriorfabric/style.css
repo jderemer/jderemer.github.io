@@ -1,0 +1,518 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Website Colors */
+.white
+{
+   background-color: #FFF;
+}
+
+.txt_white
+{
+   color: #FFF;
+}
+
+.color1
+{
+	background-color: #B1D2FF;
+}
+
+.txt_color1
+{
+	color: #B1D2FF;
+}
+
+.color2
+{
+	background-color: #3B5363;
+}
+
+.txt_color2
+{
+	color: #3B5363;
+}
+
+.color3
+{
+	background-color: #49677C;
+}
+
+.txt_color3
+{
+	color: #49677C;
+}
+
+.section_heading
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	text-align: center;
+	margin: 0;
+	padding: 20px;
+}
+
+/* Underlined Heading Style */
+h4 > u
+{
+	text-decoration: none;
+	border-bottom: 2px solid #49677C;
+   padding: 0 20px;
+}
+
+h5 > u
+{
+	text-decoration: none;
+	border-bottom: 1px solid #49677C;
+}
+
+hr
+{
+   margin: 5px 0 0 0;
+   border: 0;
+   height: 1px;
+   background: #49677C;
+   background-image: linear-gradient(to right, #FFFAA4, #49677C, #FFFAA4);
+}
+
+body
+{
+	width: 80%;
+	margin: 0 auto;
+   background-color: #FFFAA4;
+}
+	
+/*********************************/
+/*            NAVBAR             */
+/*********************************/
+nav
+{
+	width: 80%;
+	padding: 0 auto;
+	text-decoration: none;
+	font-family: 'Dancing Script', cursive;
+	position: fixed;
+   background-color: #FFFAA4;
+   z-index: 2;
+}
+
+.nav_link
+{
+   padding-top: 35px;
+}
+
+.logo
+{
+   text-align: center;
+   width: 100%;
+}
+
+nav table
+{
+   margin: 10px auto 0 auto;
+   width: 100%;
+   border-collapse: collapse;
+}
+
+nav table td
+{
+	font-size: 35px;
+   width: 20%;
+   text-align: center;
+   padding: 0;
+}
+
+nav a
+{
+	white-space: nowrap;
+	color: #49677C;
+	text-decoration: none;
+	transition-property: color;
+	transition-duration: .3s;
+}
+
+nav a:hover
+{
+	color: #B1D2FF;  /* Add a hover affect? */
+}
+
+/*********************************/
+/*    INTRO ATTENTION GETTER     */
+/*********************************/
+#intro_statement
+{
+	background-image: url(images/fabric_bg.jpg);
+	padding: 340px 0 150px 0;
+}
+
+#intro_statement h2
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 5em;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+	width: 600px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	background-color: rgba(36,50,61,.6);
+}
+
+/*********************************/
+/*           ABOUT US            */
+/*********************************/
+#about
+{
+	width: 100%;
+}
+
+#about h3
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 50px;
+	color: #FFF;
+	text-align: center;
+	margin: 0;
+	padding: 40px 0;
+}
+
+#about p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-indent: 30px;
+	padding: 40px 12% 40px 12%;
+	margin: 0;
+}
+
+/*********************************/
+/*         BANNER CLASS          */
+/*********************************/
+.banner
+{
+   background-color: #693516;
+	padding: 45px;
+   border-radius: 15px;
+}
+
+.banner h4
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 61px;
+	color: #FFF;
+	text-align: center;
+   line-height: 61px;
+	margin: 0;
+}
+
+/*********************************/
+/*           SERVICES            */
+/*********************************/
+#services .serv
+{
+	width: 100%;
+}
+
+#services .serv table
+{
+	margin: 0 auto;
+}
+
+.serv h5
+{
+   font-family: 'Dancing Script', cursive;
+   font-size: 35px;
+   font-weight: bold;
+   margin-bottom: 15px;
+}
+
+.serv .left img
+{
+	height: 80%;
+	background-color: #FFF;
+   border-radius: 10px;
+   border: 1px solid #49677C;
+	margin: 15px 15px 15px 0;
+}
+
+.serv .right img
+{
+	height: 80%;
+	background-color: #FFF;
+   border-radius: 10px;
+   border: 1px solid #49677C;
+	margin: 15px 0 15px 15px;
+}
+
+.serv p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #3B5363;
+}
+
+
+
+
+/*********************************/
+/*           PRODUCTS            */
+/*********************************/
+.product
+{
+	width: 100%;
+	border-spacing: 20px;
+}
+
+.brand p
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	line-height: 75px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: -21px;
+	padding-left: 10px;
+	padding-right: 40px;
+}
+
+.prod_view
+{
+}
+
+.prod_photo
+{
+	width: 200px;
+   height: 200px;
+	background-color: #3B5363;
+}
+
+.prod_button
+{
+	vertical-align: bottom;
+	position: relative;
+}
+.prod_button a
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: #3B5363;
+	border: 2px solid #3B5363;
+	padding: 5px;
+	text-decoration: none;
+	position: absolute;
+	bottom: 0;
+}
+
+.prod_button a:hover
+{
+	color: #FFF;
+	background-color: #3B5363;
+}
+
+.prod_info p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	text-indent: 30px;
+	color: #3B5363;
+}
+
+/*********************************/
+/*          CONTACT US           */
+/*********************************/
+#contact table
+{
+	width: 100%;
+   margin-top: 15px;
+	
+}
+
+.cont_group
+{
+	width: 50%;
+	vertical-align: top;
+}
+
+/* Contact info section */
+#contact_info
+{
+}
+
+#contact_info h5
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 35px;
+	color: #49677C;
+	margin:0;
+	margin-left: 30px;
+}
+
+#contact_info h6
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 26px;
+	color: #49677C;
+	margin: 20px 0 0 30px;
+	
+}
+
+#contact_info p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 23px;
+	color: #49677C;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+/* Send a Message */
+
+#message table
+{
+	border-spacing: 10px;
+	width: 95%;
+}
+
+.label_align
+{
+	text-align: right;
+}
+
+#message label
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #49677C;
+	line-height: 30px;
+	width: 120px;
+}
+
+#message input[type=text], #message textarea
+{
+	width: 100%;
+	border-radius: 7px;
+	border: 1px solid #49677C;
+	padding: 5px 0px 5px 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+   background-color: #FFF;
+}
+
+.mess_label
+{
+   vertical-align: top;
+}
+
+#message textarea
+{
+   height: 147px;
+}
+
+#message input[type=submit]
+{
+   font-family: 'Dancing Script', cursive;
+   font-size: 30px;
+   background-color: #49677C;
+   color: #FFFAA4;
+	width: 100px;
+   padding:5px 0;
+   border: none;
+   border-radius: 2px;
+}
+
+/*********************************/
+/*         SOCIAL MEDIA          */
+/*********************************/
+#social
+{
+   margin: 20px 0;
+   width: 100%;
+}
+
+#social table
+{
+   margin: 15px auto 0 auto;
+}
+
+#social p
+{
+   font-family: 'Open Sans', sans-serif;
+   font-size: 20px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#social td
+{
+   width: 80px;
+   text-align: center;
+}
+
+#social img
+{
+   width: 60px;
+   height: 60px;
+}
+
+/*********************************/
+/*            FOOTER             */
+/*********************************/
+footer
+{
+	padding: 10px 0;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	line-height: 25px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+footer p
+{
+	margin: 0;
+   padding-left: 5px;
+	display: inline;
+	
+}
+
+footer #comp_name
+{
+	font-family: 'Dancing Script', cursive;
+	font-size: 25px;
+	color: #FFF;
+}
+
+/*       MOBILE STYLES       */
+/*@media screen and (max-width: 900px) 
+{
+	body
+	{
+		width: 100%;
+		margin: 0;
+	}
+	
+	nav
+	{
+		width: 100%;
+		padding: 0;
+	}
+	
+	#intro_statement h2
+	{
+		width: 100%
+	}
+	
+    #contact_info, #message
+	{
+		width: 100%
+	}
+	
+	#contact_info h6, #contact_info h5, #contact_info p
+	{
+		text-align: center;
+	}
+}*/
