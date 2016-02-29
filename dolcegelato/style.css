@@ -1,0 +1,15 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700);
+
+body
+{
+   width: 100%;
+}
+
+#background img
+{
+   width: 100%;
+}
