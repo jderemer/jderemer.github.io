@@ -3,11 +3,12 @@
 	<head>
 		<title>DOLCE & GELATO</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="style.css" type="text/css"></head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   </head>
       
 	<body>
       <!-- Smooth Scroll Navbar -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
 			  $('a[href*=#]').click(function() {
@@ -27,18 +28,37 @@
 			});
 		</script>
       
+      <!-- Back to Top Button -->
+      <a href="#" class="back-to-top">Back to Top</a>
+      <script type="text/javascript">
+         $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+         var amountScrolled = 300;
+
+         $(window).scroll(function() {
+            if ( $(window).scrollTop() > amountScrolled ) {
+               $('a.back-to-top').fadeIn('slow');
+            } else {
+               $('a.back-to-top').fadeOut('slow');
+            }
+         });
+
+         $('a.back-to-top, a.simple-back-to-top').click(function() {
+            $('html, body').animate({
+               scrollTop: 0
+            }, 700);
+            return false;
+         });
+      </script>
+      
       <!--------------------------->
       <!-- Header and Navigation -->
       <!--------------------------->
       <div id="logo_banner">
-         <table>
-            <tr>
-               <td>
-                  <h1>DOLCE & GELATO</h1>
-                  <p>gelato - panini - coffee - vino</p>
-               </td>
-            </tr>
-         </table>
+         <div>
+            <h1>DOLCE & GELATO</h1>
+            <p>gelato - panini - coffee - vino</p>
+         </div>
       </div>
       
       <nav>
@@ -75,29 +95,24 @@
       <!--       ABOUT US        -->
       <!--------------------------->
       <div id="about">
-         <table>
-            <tr>
-               <td>
-                  <h2>ABOUT US</h2>
-               </td>
-               <td rowspan="2" id="about_img">
-                  <img src="images/marie.png" 
-                       alt"Marie Antoinette">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <p class="h2_text">
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                     nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
-                     sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
-                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                     nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                     sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-               </td>
-            </tr>
-         </table>
+         <div id="about_group">
+            <div id="about_img">
+               <img src="images/marie.png" 
+                    alt"Marie Antoinette">
+            </div>
+            <div id="about_text">
+               <h2>ABOUT US</h2>
+               <p class="h2_text">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
+                  sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
+                  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                  sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+               </p>
+            </div>
+         </div>
       </div>
       
       
@@ -112,67 +127,49 @@
       <!--         MENU          -->
       <!--------------------------->
       <div id="menu">
-         <table>
-            <tr>
-               <td>
-                  <h3>GELATO</h3>
-               </td>
-               <td rowspan="2" class="menu_img">
-                  <img src="images/gelato.jpg">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <p>
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                     nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
-                     sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
-                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-               </td>
-            </tr>
-         </table>
-         <table>
-            <tr>
-               <td>
-                  <h3>SANDWICHES</h3>
-               </td>
-               <td rowspan="2" class="menu_img">
-                  <img src="images/sandwich.jpg">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <p>
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                     nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
-                     sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
-                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-               </td>
-            </tr>
-         </table>
-         <table>
-            <tr>
-               <td>
-                  <h3>OTHER SNACKS</h3>
-               </td>
-               <td rowspan="2" class="menu_img">
-                  <img src="images/nacho.jpg">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <p>
-                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                     nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
-                     sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
-                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-               </td>
-            </tr>
-         </table>
+         <div class="row">
+            <div class="item_image">
+               <img src="images/gelato.jpg">
+            </div>
+            <div class="item_text">
+               <h3>GELATO</h3>
+               <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
+                  sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
+                  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+               </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="item_image">
+               <img src="images/sandwich.jpg">
+            </div>
+            <div class="item_text">
+               <h3>SANDWICHES</h3>
+               <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
+                  sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
+                  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+               </p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="item_image">
+               <img src="images/nacho.jpg">
+            </div>
+            <div class="item_text">
+               <h3>OTHER SNACKS</h3>
+               <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut lavore et dolre magna aliquyam erat,
+                  sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum.
+                  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+               </p>
+            </div>
+         </div>
       </div>
-      
-      
-      
       
       <!--------------------------->
       <!--       FIND US         -->
@@ -180,26 +177,18 @@
       <div id="find">
          <h2>FIND US</h2>
          <div id="address_hours">
-            <table>
-               <tr>
-                  <td>
-                     <h4>Dolce & Gelato</h4>
-                     <p>221 E Zaragoza Street<br />
-                        Pensacola, FL 32501<br />
-                        850.490.1419</p>
-                  </td>
-               </tr>
-            </table>
-            <table>
-               <tr>
-                  <td>
-                     <h4>Hours</h4>
-                     <p>Tues - Thurs: 11:30am to 7:00pm<br />
-                        Fri- Sat:     11:30am to 9:00pm<br />
-                        Sun:          12:00pm to 6:30pm</p>
-                  </td>
-               </tr>
-            </table>
+            <div>
+               <h4>Dolce & Gelato</h4>
+               <p>221 E Zaragoza Street<br />
+                  Pensacola, FL 32501<br />
+                  850.490.1419</p>
+            </div>
+            <div>
+               <h4>Hours</h4>
+               <p>Tues - Thurs: 11:30am to 7:00pm<br />
+                  Fri- Sat:     11:30am to 9:00pm<br />
+                  Sun:          12:00pm to 6:30pm</p>
+            </div>
          </div>
          <table id="social_links">
             <tr>
@@ -256,6 +245,9 @@
                     async defer>
             </script>
          </div>
+         <!---------------------------->
+         <!--  ADD GOOGLE API KEY!!! -->
+         <!---------------------------->
          <a href="https://www.google.com/maps?q=221%20E%20Zaragoza%20Street,%20Pensacola,%20FL,%20US,%2032501&z=15"
             id="get_direct"
             target="_blank">directions to here</a>
@@ -285,7 +277,7 @@
                </tr>
                <tr>
                   <td class="label_align">
-                      <label for="name">Email</label>
+                      <label for="email">Email</label>
                   </td>
                   <td>
                      <input type="text"
@@ -297,7 +289,7 @@
                </tr>
                <tr>
                   <td class="label_align mess_label">
-                      <label for="name">Message</label>
+                      <label for="user_mess">Message</label>
                   </td>
                   <td>
                      <textarea type="textarea"
