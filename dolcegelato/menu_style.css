@@ -1,0 +1,288 @@
+/* CSS Document */
+
+/* IMPORTED FONTS */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html
+{
+   background-color: #300062;
+}
+
+body
+{
+   width: 100%;
+   margin: 0;
+}
+
+/*************************/
+/*  BACK TO TOP BUTTON   */
+/*************************/
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 5;
+	right: 20px;
+	bottom: 40px;
+	background: #300062 url("images/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
+   border: 3px solid #FFF;
+}
+
+a.back-to-top:hover
+{
+   background-color: #743dc6;
+}
+
+/*************************/
+/*      NAVIGATION       */
+/*************************/
+#logo_banner
+{
+   width: 100%;
+   background-image: url("images/leopard_skin.jpg");
+   text-align: center;
+   top: 0;
+}
+
+#logo_banner div
+{
+   width:70%;
+   border-spacing: 0;
+   margin: 0 auto;
+   padding: 20px 0;
+   background-color: #000;
+}
+
+#logo_banner h1
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 60px;
+   color: #FFF;
+   margin: 0;
+   text-align: center;
+}
+
+#logo_banner p
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   color: #ab2626;
+   margin: 10px;
+}
+
+nav
+{
+   background-color: #300062;
+   width: 100%;
+   height: 50px;
+}
+
+nav table
+{
+   margin: 0 auto;
+   width: 70%;
+   border-collapse: collapse;
+}
+
+nav table td
+{
+	font-size: 35px;
+   width: 20%;
+   text-align: center;
+   padding: 0;
+}
+
+nav a
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 20px;
+   letter-spacing: -1px;
+   line-height: 50px;
+   text-decoration: none;
+	white-space: nowrap;
+	color: #bf9ee0;
+	text-decoration: none;
+	transition-property: color;
+	transition-duration: .3s;
+}
+
+nav a:hover
+{
+	color: #FFF;  /* Add a hover affect? */
+}
+
+/*************************/
+/*        FOOTER         */
+/*************************/
+#menu
+{
+   width: 100%;
+   margin: 0 auto;
+   background-color: #300062;
+}
+
+#menu #header
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 55px;
+   color: #fff;
+   text-align: center;
+   margin: 0;
+   padding: 60px 0;
+}
+
+#container
+{
+   width: 90%;
+   margin: 0 auto;
+}
+
+#menu .column
+{
+   width: 50%;
+   display: inline-block;
+   float: left;
+}
+
+#menu .category
+{
+   width: 96.25%;
+   margin: 15px auto;
+   background-color: #300062;
+   border:7px solid #743dc6;
+}
+
+#menu .cat_info
+{
+   width: 90%;
+   margin: 0 auto;
+   padding: 30px 0 60px 0;
+}
+
+#menu .cat_name
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 45px;
+   color: #fff;
+   margin: 0;
+   padding-top: 60px;
+   margin-bottom: 60px;
+   border-bottom: 4px solid #fff;
+}
+
+#menu .item
+{
+   padding-left: 30px;
+}
+
+#menu .item .title_row
+{
+   width: 100%;
+}
+
+#menu .item_name
+{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 30px;
+   color: #fff;
+   margin: 0;
+   padding-right: 40px;
+}
+
+#menu .item_desc
+{
+   font-family: 'Crimson Text', serif;
+   font-size: 25px;
+   color: #ff8c8c;
+   margin-top: 5px;
+   padding-bottom: 30px;
+}
+
+/*************************/
+/*        FOOTER         */
+/*************************/
+footer
+{
+	font-family: 'Montserrat', sans-serif;
+   font-size: 17px;
+	color: #ab2626;
+   background-color: #000;
+}
+
+footer p
+{
+	margin: 0;
+   padding-left: 5px;
+	display: inline;
+	
+}
+
+footer #comp_name
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px!important;
+   font-weight: 400;
+	color: #FFF!important;
+}
+
+
+
+/*****************************/
+/*       MOBILE STYLES       */
+/*****************************/
+@media screen and (max-width: 1040px) 
+{
+   /*      NAVBAR      */
+   #logo_banner h1
+      {
+      font-size: 47px;
+   }
+   
+   #logo_banner p
+      {
+      font-size: 11px;
+   }
+   
+   /*       MENU       */
+   #menu .column
+      {
+      width: 100%; 
+   }
+   
+   /*      FOOTER      */
+   footer
+      {
+      font-size: 8px;
+      text-align: center;
+   }
+   
+   footer #comp_name
+      {
+      font-size: 15px!important;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

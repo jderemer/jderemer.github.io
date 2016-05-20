@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOLCE & GELATO</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="menu_style.css" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   </head>
+      
+	<body>
+      <!-- Smooth Scroll Navbar -->
+		<script>
+			$(document).ready(function(){
+			  $('a[href*=#]').click(function() {
+				 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+				 && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+					$target = $target.length && $target
+					|| $('[name=' + this.hash.slice(1) +']');
+					if ($target.length) {
+					  var targetOffset = $target.offset().top;
+					  $('html,body')
+					  .animate({scrollTop: targetOffset}, 1000);
+					 return false;
+					}
+				 }
+			  });
+			});
+		</script>
+      
+      <!-- Back to Top Button -->
+      <a href="#" class="back-to-top">Back to Top</a>
+      <script type="text/javascript">
+         $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+         var amountScrolled = 300;
+
+         $(window).scroll(function() {
+            if ( $(window).scrollTop() > amountScrolled ) {
+               $('a.back-to-top').fadeIn('slow');
+            } else {
+               $('a.back-to-top').fadeOut('slow');
+            }
+         });
+
+         $('a.back-to-top, a.simple-back-to-top').click(function() {
+            $('html, body').animate({
+               scrollTop: 0
+            }, 700);
+            return false;
+         });
+      </script>
+      
+      <!--------------------------->
+      <!-- Header and Navigation -->
+      <!--------------------------->
+      <div id="logo_banner">
+         <div>
+            <h1>DOLCE & GELATO</h1>
+            <p>gelato - panini - coffee - vino</p>
+         </div>
+      </div>
+      
+      <nav>
+         <table>
+				<tr>
+					<td class="nav_link">
+						<a href="index.html#about" class="smoothscroll">ABOUT</a>
+					</td>
+               <td class="nav_link">
+						<a href="index.html#menu" class="smoothscroll">MENU</a>
+					</td>
+					<td class="nav_link">
+						<a href="index.html#find" class="smoothscroll">FIND US</a>
+					</td>
+					<td class="nav_link">
+						<a href="index.html#contact" class="smoothscroll">CONTACT</a>
+					</td>
+				</tr>
+			</table>
+      </nav>
+      
+      <!--------------------------->
+      <!--        MENU           -->
+      <!--------------------------->
+      <div id="menu">
+         <h2 id="header">MENU</h2>
+         <div id="container">
+            <div class="column">
+               <div class="category">
+                  <div class="cat_info">
+                     <h3 class="cat_name">PANINIS</h3>
+                     <div class="item">
+                        <div class="title_row">
+                           <h4 class="item_name">Ricky Ricardo</h4>
+                        </div>
+                        <p class="item_desc">Our Home made Cuban Roast Pork, Ham, Swiss cheese, 
+                                             Pickle, Mustard. A year round favorite.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Chicky Ricky</h4>
+                        <p class="item_desc">Just like the Ricky but with our homemade Cuban 
+                                             Chicken, Turkey, Swiss cheese, pickle and mustard.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Caprese</h4>
+                        <p class="item_desc">Tomatoes, Mozzarella, Provolone, pesto mayo blend. 
+                                             Seasonings. A light delight.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">You're So Cheesy!</h4>
+                        <p class="item_desc">Muenster, Gouda, Fig Jam, and Caramelized onions.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Fat Elvis</h4>
+                        <p class="item_desc">Peanut Butter, Banana Slices, Bacon. A truly famous sandwich.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Celia Cruz</h4>
+                        <p class="item_desc">Turkey, Cream Cheese, Strawberry Jam.</p>
+                     </div>
+                  </div>
+               </div>
+            
+               <div class="category">
+                  <div class="cat_info">
+                     <h3 class="cat_name">WEEKEND AND SEASONAL SPECIALS </h3>
+                     <div class="item">
+                        <h4 class="item_name">Macho Man Dip</h4>
+                        <p class="item_desc">Everyone loves our cheese dip. Turkey crumbles, melted cheeses, tomatoes, 
+                                             spices, onions, jalapenos and other seasonings make for a spicey dip 
+                                             served with Nacho chips.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Bacon, Wasabi, Cheddar Dip</h4>
+                        <p class="item_desc">As the title states, Bacon, wasabi, cheddar, and other secret seasoning 
+                                             make for a delicious spreadable dip. Served with chips.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Ceviche</h4>
+                        <p class="item_desc">Fresh seasonal fish marinated in olive oil, citrus juices, cilantro, 
+                                             onions and other seasonings and served with nacho chips. A true warm 
+                                             weather refreshing delight.</p>
+                     </div>
+                  </div>
+               </div>
+             </div>
+             <div class="column">
+               <div class="category">
+                  <div class="cat_info">
+                     <h3 class="cat_name">QUESADILLAS</h3>
+                     <div class="item">
+                        <h4 class="item_name">Cheese Quesadilla</h4>
+                        <p class="item_desc">A Blend of Cheeses with seasoning.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Pulled Pork or Chicken Quesadilla</h4>
+                        <p class="item_desc">Our blend of cheeses with your choice of our pulled Cuban 
+                                             pork or chicken with seasoning.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Loaded Quesadilla</h4>
+                        <p class="item_desc">Your choice of pork or chicken along with our blend of 
+                                             cheeses, caramelized onions, tomato slices, jalapenos 
+                                             and seasonings.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="category">
+                  <div class="cat_info">
+                     <h3 class="cat_name">FLATBREADS</h3>
+                     <div class="item">
+                        <h4 class="item_name">Cheese</h4>
+                        <p class="item_desc">Our 4 Cheese blend and red sauce on a whole wheat or wheat 
+                                             flour tortilla. A light sprinkling of seasoning.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Cheese and Pepperoni</h4>
+                        <p class="item_desc">Special blend of cheeses on either a whole wheat or wheat 
+                                             and flour tortilla with peperoni. We also offer turkey peperoni 
+                                             for those wanting a slightly healthier option. A light sprinkling 
+                                             of seasoning.</p>
+                     </div>
+                     <div class="item">
+                        <h4 class="item_name">Pesto and Goat Cheese</h4>
+                        <p class="item_desc">Pesto sauce smothered on your choice of a whole wheat or wheat and 
+                                             flour tortilla with a spreading of goat cheese. A light sprinkling of 
+                                             seasoning.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="category">
+                  <div class="cat_info">
+                     <h3 class="cat_name">CHEESE PLATES</h3>
+                     <div class="item">
+                        <h4 class="item_name">Small or Large Cheese Plate</h4>
+                        <p class="item_desc">Irish Cheddar, Bleu cheese, Asiago. Also includes walnuts, 
+                                             dried fruit, crackers,and your choice of Original or hot Mango 
+                                             Chutney. (3 or 5 oz.)</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
+      
+      <!--------------------------->
+      <!--       FOOTER          -->
+      <!--------------------------->
+      <footer style="float: left;">
+         <p>&copy;2016</p>
+			<p id="comp_name">DOLCE & GELATO</p>
+         <p>All Rights Reserved.</p>
+      </footer>
+      
+      
+	</body>
+</html>
+
+
+
+
+
