@@ -15,8 +15,10 @@
 		<!-- Script returns the countdown numbers and styles based on the holiday selected -->
 		<script>
 			// Holiday dates for the target to be set as
-			var thanksgiving = new Date(2016, 10, 24, 0, 0, 0);
-			var christmas    = new Date(2016, 11, 25, 0, 0, 0);
+			var currentYear = new Date().getFullYear();
+			
+			var thanksgiving = new Date(currentYear, 10, 24, 0, 0, 0);
+			var christmas    = new Date(currentYear, 11, 25, 0, 0, 0);
 			var targetDate   = thanksgiving;
 			
 			// Calculate the number of days till target
